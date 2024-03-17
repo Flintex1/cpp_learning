@@ -1,8 +1,8 @@
-#include <QCoreApplication>
-
-int main(int argc, char *argv[])
+#include <iostream>
+int main()
 {
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+    //TODO 1st task
+    std::cout << "TODO" << std::endl;
+    // TODO Do smth
+    return 0;
 }

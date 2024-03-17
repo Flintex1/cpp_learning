@@ -1,8 +1,8 @@
-#include <QCoreApplication>
+#include <iostream>
 
-int main(int argc, char *argv[])
+int testVariable{555}; // Глобальная переменная
+
+int main()
 {
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+    std::cout << "Моя глобальная переменная: " << testVariable << "\n";
 }
