@@ -3,7 +3,7 @@ QT -= gui
 
 CONFIG += c++11
 
-TARGET = my_new_project
+TARGET = cout_cin_task
 CONFIG += console
 CONFIG -= app_bundle
 

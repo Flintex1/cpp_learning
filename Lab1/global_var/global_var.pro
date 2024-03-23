@@ -3,7 +3,7 @@ QT -= gui
 
 CONFIG += c++11
 
-TARGET = lesson5
+TARGET = global_var
 CONFIG += console
 CONFIG -= app_bundle
 
