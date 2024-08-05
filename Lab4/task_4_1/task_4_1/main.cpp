@@ -1,9 +1,9 @@
 #include <iostream>
 #include "unit.h"
 
-//#define Unit 1
+#define Unit 1
 //#define Unit 2
-#define Unit 3
+//#define Unit 3
 //#define Unit 4
 //#define Unit 5
 //#define Unit 6
@@ -28,8 +28,6 @@ int main() {
     unit7();
     #elif Unit == 8
     unit8();
-    #else
-        std::cout << "No unit selected." << std::endl;
     #endif
 
     return 0;
