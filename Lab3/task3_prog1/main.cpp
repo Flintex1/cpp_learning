@@ -13,6 +13,13 @@ void printCharInfo(char character) {
 
 //3 Функция инициализации и вывода диапазонов значений
 
+// Прототипы функций с trailing return type
+auto copyInitialization(int iValue,bool bValue,char cValue,long lValue) -> void;
+auto directInitialization() -> void;
+auto uniformInitialization() -> void;
+auto autoInitialization() -> void;
+
+
 // Функция для копирующей инициализации
 auto copyInitialization() -> void {
     int iValue = 42;
@@ -20,12 +27,12 @@ auto copyInitialization() -> void {
     char cValue = 'A';
     long lValue = 1000000L;
 
-    std::cout << "Copy Initialization:" << std::endl;
-    std::cout << "int: " << iValue << " (Range: " << std::numeric_limits<int>::min() << " to " << std::numeric_limits<int>::max() << ")" << std::endl;
-    std::cout << "bool: " << bValue << " (Range: " << std::numeric_limits<bool>::min() << " to " << std::numeric_limits<bool>::max() << ")" << std::endl;
-    std::cout << "char: " << cValue << " (Range: " << +std::numeric_limits<char>::min() << " to " << +std::numeric_limits<char>::max() << ")" << std::endl;
-    std::cout << "long: " << lValue << " (Range: " << std::numeric_limits<long>::min() << " to " << std::numeric_limits<long>::max() << ")" << std::endl;
-    std::cout << std::endl;
+    std::cout << "Копирующая инициализация:" << std::endl;
+    std::cout << "int: " << iValue << " (Лимиты с: " << std::numeric_limits<int>::min() << " до " << std::numeric_limits<int>::max() << ")" << std::endl;
+   std::cout << "bool: " << bValue << " (Лимиты с: " << std::numeric_limits<bool>::min() << " до " << std::numeric_limits<bool>::max() << ")" << std::endl;
+    std::cout << "char: " << cValue << " (Лимиты с: " << +std::numeric_limits<char>::min() << " до " << +std::numeric_limits<char>::max() << ")" << std::endl;
+    std::cout << "long: " << lValue << " (Лимиты с: " << std::numeric_limits<long>::min() << " до " << std::numeric_limits<long>::max() << ")" << std::endl;
+
 }
 
 // Функция для прямой инициализации
@@ -35,12 +42,12 @@ auto directInitialization() -> void {
     char cValue('A');
     long lValue(1000000L);
 
-    std::cout << "Direct Initialization:" << std::endl;
-    std::cout << "int: " << iValue << " (Range: " << std::numeric_limits<int>::min() << " to " << std::numeric_limits<int>::max() << ")" << std::endl;
-    std::cout << "bool: " << bValue << " (Range: " << std::numeric_limits<bool>::min() << " to " << std::numeric_limits<bool>::max() << ")" << std::endl;
-    std::cout << "char: " << cValue << " (Range: " << +std::numeric_limits<char>::min() << " to " << +std::numeric_limits<char>::max() << ")" << std::endl;
-    std::cout << "long: " << lValue << " (Range: " << std::numeric_limits<long>::min() << " to " << std::numeric_limits<long>::max() << ")" << std::endl;
-    std::cout << std::endl;
+    std::cout << "Прямая инициализация:" << std::endl;
+    std::cout << "int: " << iValue << " (Лимиты с: " << std::numeric_limits<int>::min() << " до " << std::numeric_limits<int>::max() << ")" << std::endl;
+    std::cout << "bool: " << bValue << " (Лимиты с: " << std::numeric_limits<bool>::min() << " до " << std::numeric_limits<bool>::max() << ")" << std::endl;
+    std::cout << "char: " << cValue << " (Лимиты с: " << +std::numeric_limits<char>::min() << " до " << +std::numeric_limits<char>::max() << ")" << std::endl;
+    std::cout << "long: " << lValue << " (Лимиты с: " << std::numeric_limits<long>::min() << " до " << std::numeric_limits<long>::max() << ")" << std::endl;
+
 }
 
 // Функция для uniform инициализации
@@ -50,12 +57,12 @@ auto uniformInitialization() -> void {
     char cValue{'A'};
     long lValue{1000000L};
 
-    std::cout << "Uniform Initialization:" << std::endl;
-    std::cout << "int: " << iValue << " (Range: " << std::numeric_limits<int>::min() << " to " << std::numeric_limits<int>::max() << ")" << std::endl;
-    std::cout << "bool: " << bValue << " (Range: " << std::numeric_limits<bool>::min() << " to " << std::numeric_limits<bool>::max() << ")" << std::endl;
-    std::cout << "char: " << cValue << " (Range: " << +std::numeric_limits<char>::min() << " to " << +std::numeric_limits<char>::max() << ")" << std::endl;
-    std::cout << "long: " << lValue << " (Range: " << std::numeric_limits<long>::min() << " to " << std::numeric_limits<long>::max() << ")" << std::endl;
-    std::cout << std::endl;
+    std::cout << "uniform инициализация:" << std::endl;
+    std::cout << "int: " << iValue << " (Лимиты с: " << std::numeric_limits<int>::min() << " до " << std::numeric_limits<int>::max() << ")" << std::endl;
+    std::cout << "bool: " << bValue << " (Лимиты с: " << std::numeric_limits<bool>::min() << " до " << std::numeric_limits<bool>::max() << ")" << std::endl;
+    std::cout << "char: " << cValue << " (Лимиты с: " << +std::numeric_limits<char>::min() << " до " << +std::numeric_limits<char>::max() << ")" << std::endl;
+    std::cout << "long: " << lValue << " (Лимиты с: " << std::numeric_limits<long>::min() << " до " << std::numeric_limits<long>::max() << ")" << std::endl;
+
 }
 
 // Функция для инициализации с использованием auto
@@ -65,12 +72,12 @@ auto autoInitialization() -> void {
     auto cValue = 'A';
     auto lValue = 1000000L;
 
-    std::cout << "Auto Initialization:" << std::endl;
-    std::cout << "int: " << iValue << " (Range: " << std::numeric_limits<int>::min() << " to " << std::numeric_limits<int>::max() << ")" << std::endl;
-    std::cout << "bool: " << bValue << " (Range: " << std::numeric_limits<bool>::min() << " to " << std::numeric_limits<bool>::max() << ")" << std::endl;
-    std::cout << "char: " << cValue << " (Range: " << +std::numeric_limits<char>::min() << " to " << +std::numeric_limits<char>::max() << ")" << std::endl;
-    std::cout << "long: " << lValue << " (Range: " << std::numeric_limits<long>::min() << " to " << std::numeric_limits<long>::max() << ")" << std::endl;
-    std::cout << std::endl;
+    std::cout << "Авто инициализация:" << std::endl;
+    std::cout << "int: " << iValue << " (Лимиты с: " << std::numeric_limits<int>::min() << " до " << std::numeric_limits<int>::max() << ")" << std::endl;
+    std::cout << "bool: " << bValue << " (Лимиты с: " << std::numeric_limits<bool>::min() << " до " << std::numeric_limits<bool>::max() << ")" << std::endl;
+    std::cout << "char: " << cValue << " (Лимиты с: " << +std::numeric_limits<char>::min() << " до " << +std::numeric_limits<char>::max() << ")" << std::endl;
+    std::cout << "long: " << lValue << " (Лимиты с: " << std::numeric_limits<long>::min() << " до " << std::numeric_limits<long>::max() << ")" << std::endl;
+
 }
 
 // 4. Глобальная и локальная переменные с одинаковым именем
